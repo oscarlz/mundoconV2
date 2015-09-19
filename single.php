@@ -138,6 +138,18 @@
 							<?php } ?>
 						</div>
 					</div><!--.post-content box mark-links-->
+					
+					<div id="taboola-below-article-thumbnails"></div>
+					<script type="text/javascript">
+					  window._taboola = window._taboola || [];
+					  _taboola.push({
+						mode: 'thumbnails-a',
+						container: 'taboola-below-article-thumbnails',
+						placement: 'Below Article Thumbnails',
+						target_type: 'mix'
+					  });
+					</script>
+					
 					<?php if($mts_options['mts_related_posts'] == '1') { ?>	
 						<!-- Start Related Posts -->
 						<?php $categories = get_the_category($post->ID); if ($categories) { $category_ids = array(); foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id; $args=array( 'category__in' => $category_ids, 'post__not_in' => array($post->ID), 'showposts'=>2, 'ignore_sticky_posts' => 1, 'orderby' => 'rand' );
@@ -164,13 +176,19 @@
 							<?php } echo '</ul></div>'; }} wp_reset_query(); ?>
 						<!-- .related-posts -->
 					<?php }?> 	
-					<div align="center">
-						<!--TBN BTF 300x250 pos 3 STARTS-->
-							<div id="tbn-850ba9df-4fe5-4442-9087-cb4e0549874c">
-								 <script type="text/javascript">window.$tbn = window.$tbn || {"d":function(){}}; $tbn.d("850ba9df-4fe5-4442-9087-cb4e0549874c");</script>
-							</div>
-						<!--TBN BTF 300x250 pos 3 ENDS-->					
-					</div>		
+					
+					<?php
+					/*
+						<div align="center">
+							<!--TBN BTF 300x250 pos 3 STARTS-->
+								<div id="tbn-850ba9df-4fe5-4442-9087-cb4e0549874c">
+									 <script type="text/javascript">window.$tbn = window.$tbn || {"d":function(){}}; $tbn.d("850ba9df-4fe5-4442-9087-cb4e0549874c");</script>
+								</div>
+							<!--TBN BTF 300x250 pos 3 ENDS-->					
+						</div>
+					*/					
+					?>
+					
 					<?php if($mts_options['mts_author_box'] == '1') { ?>
 						<div class="postauthor">
 							<h4><?php _e('About The Author', 'mythemeshop'); ?></h4>

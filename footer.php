@@ -10,14 +10,6 @@
 	<div class="footerTop">
 		<div class="container">
 			<div class="footer-widgets <?php echo $footer_widget_columns; ?>">
-			
-				<div id="tb-ad-footer" align="center" style="margin-bottom: 40px; margin-top: -10px;">
-				<!--TBN BTF 728x90 pos 1 STARTS-->
-					<div id="tbn-9e99c453-737d-48e6-bbcc-9ba2f5749e12">
-						 <script type="text/javascript">window.$tbn = window.$tbn || {"d":function(){}}; $tbn.d("9e99c453-737d-48e6-bbcc-9ba2f5749e12");</script>
-					</div>
-				<!--TBN BTF 728x90 pos 1 ENDS-->
-				</div>
 				<div class="f-widget f-widget-1">
 					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 1') ) : ?><?php endif; ?>
 				</div>
@@ -42,5 +34,9 @@
 <?php mts_footer(); ?>
 <?php wp_footer(); ?>
 </div><!--.main-container-wrap-->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({flush: true});
+</script>
 </body>
 </html>
